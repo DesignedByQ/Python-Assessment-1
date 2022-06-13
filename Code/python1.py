@@ -35,10 +35,18 @@
 	# What was the name of the function we have seen to check the length of a container?  Use your CLI to access the Python documentation and get help(len).
 
 def one(input1, input2):
-	return ""
-	
+	size1 = len(input1)
+	size2 = len(input2)
+	#print(size1)
 
+	if size1 > size2:
+		return input1
+	elif size2 > size1:
+		return input2
+	else:
+		return f"{input1} {input2}"
 
+print(one("hi", "hello"))
 
 
 
@@ -65,6 +73,7 @@ def one(input1, input2):
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(str).
 
 def two(input):
+
 	return ""
 
 
@@ -90,8 +99,16 @@ def two(input):
 	# No Hints for this question
 
 def three(arg1):
-	return ""
+	if arg1 % 3 == 0 and arg1 % 5 == 0:
+		return "fizzbuzz"
+	elif arg1 % 3 == 0:
+		return "fizz"
+	elif arg1 % 5 == 0:
+		return "buzz"
+	else:
+		return "null"
 
+print(three(3))
 
 	# <QUESTION 4>
 
@@ -148,7 +165,7 @@ def five(input):
 
 	# <QUESTION 6>
 
-    # There is a well known mnemonic which goes "I before E, except after C", which is used to determine which order "ei" or "ie" should be in a word.
+    # "I before E, except after C", which is used to determine which order "ei" or "ie" should be in a word.
     
     # Write a function which returns the boolean True if a string follows the mnemonic, and returns the boolean False if not.
 
@@ -165,9 +182,33 @@ def five(input):
 
 
 def six(input):
-	return ""
 	
+	if "c" in input:
+		input.split()
+		posC = input.index('c')
+		posI = input.index('i')
+		posE = input.index('e')
+
+		if posC < posE and posC < posI:
+			if posE < posI:
+				return True
+			else:
+				return False
+		elif posC > posE and posC < posI:
+			return False
+			
+	else:
+
+		if "ie" in input:
+			return True
+		else:
+			return False
+		
 	
+print(six("ceiling"))	
+print(six("believe"))	
+print(six("glacier"))
+print(six("height"))	
 		
 
 	# <QUESTION 7>
