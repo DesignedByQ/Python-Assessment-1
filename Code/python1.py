@@ -190,14 +190,13 @@ def six(input):
 		posI = input.index('i')
 		posE = input.index('e')
 
-		if posC < posE and posC < posI:
-			if posE < posI:
-				return True
-			else:
-				return False
-		elif posC > posE and posC < posI:
+		if "ei" in input:
+			return True
+		elif "ecie" in input:
+			return True
+		else:
 			return False
-
+		
 	else:
 
 		if "ie" in input:
@@ -210,6 +209,9 @@ print(six("ceiling"))
 print(six("believe"))	
 print(six("glacier"))
 print(six("height"))	
+print(six("recieve"))
+	
+
 		
 
 	# <QUESTION 7>
