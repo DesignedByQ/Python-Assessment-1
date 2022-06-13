@@ -196,7 +196,7 @@ def six(input):
 				return False
 		elif posC > posE and posC < posI:
 			return False
-			
+
 	else:
 
 		if "ie" in input:
@@ -228,8 +228,17 @@ print(six("height"))
 #    return ch.upper() in ['A', 'E', 'I', 'O', 'U'] 
 
 def seven(input): 
-	pass
+
+	count = 0
+	
+	for i in input.upper():
+		if i == 'A' or i == 'E' or i == 'I' or i == 'O' or i == 'U':
+			count = count + 1
+
+	
+	return count
    
+print(seven("hEelLoooO"))
 
 	# <QUESTION 8>
 
