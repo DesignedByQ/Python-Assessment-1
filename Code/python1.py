@@ -133,6 +133,7 @@ print(three(3))
 	# help(int) for working with numbers and help(str) for working with Strings.
 
 def four(arg1):
+	
 	return ""
 
 	# <QUESTION 5>
@@ -278,8 +279,21 @@ def eight(input):
 	# Take a look at the documentation for Strings, List and range.
 
 def nine(inputString, char):
-	return ""
+	new = inputString.replace(" ", "")
 
+	new.split(", ")
+	print(new)
+	'''for i in new1:
+		if i == char:
+			pos = new1.index(char)
+		
+			return pos
+
+	else:
+		return -1'''
+
+
+print(nine("This is a Sentence","S"))
 
 	# <QUESTION 10>
 
