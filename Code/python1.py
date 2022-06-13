@@ -35,10 +35,18 @@
 	# What was the name of the function we have seen to check the length of a container?  Use your CLI to access the Python documentation and get help(len).
 
 def one(input1, input2):
-	return ""
-	
+	size1 = len(input1)
+	size2 = len(input2)
+	#print(size1)
 
+	if size1 > size2:
+		return input1
+	elif size2 > size1:
+		return input2
+	else:
+		return f"{input1} {input2}"
 
+print(one("hi", "hello"))
 
 
 
@@ -65,6 +73,7 @@ def one(input1, input2):
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(str).
 
 def two(input):
+
 	return ""
 
 
@@ -90,8 +99,16 @@ def two(input):
 	# No Hints for this question
 
 def three(arg1):
-	return ""
+	if arg1 % 3 == 0 and arg1 % 5 == 0:
+		return "fizzbuzz"
+	elif arg1 % 3 == 0:
+		return "fizz"
+	elif arg1 % 5 == 0:
+		return "buzz"
+	else:
+		return "null"
 
+print(three(3))
 
 	# <QUESTION 4>
 
@@ -116,6 +133,7 @@ def three(arg1):
 	# help(int) for working with numbers and help(str) for working with Strings.
 
 def four(arg1):
+	
 	return ""
 
 	# <QUESTION 5>
@@ -148,7 +166,7 @@ def five(input):
 
 	# <QUESTION 6>
 
-    # There is a well known mnemonic which goes "I before E, except after C", which is used to determine which order "ei" or "ie" should be in a word.
+    # "I before E, except after C", which is used to determine which order "ei" or "ie" should be in a word.
     
     # Write a function which returns the boolean True if a string follows the mnemonic, and returns the boolean False if not.
 
@@ -165,9 +183,35 @@ def five(input):
 
 
 def six(input):
-	return ""
 	
+	if "c" in input:
+		input.split()
+		posC = input.index('c')
+		posI = input.index('i')
+		posE = input.index('e')
+
+		if "ei" in input:
+			return True
+		elif "ecie" in input:
+			return True
+		else:
+			return False
+		
+	else:
+
+		if "ie" in input:
+			return True
+		else:
+			return False
+		
 	
+print(six("ceiling"))	
+print(six("believe"))	
+print(six("glacier"))
+print(six("height"))	
+print(six("recieve"))
+	
+
 		
 
 	# <QUESTION 7>
@@ -187,8 +231,17 @@ def six(input):
 #    return ch.upper() in ['A', 'E', 'I', 'O', 'U'] 
 
 def seven(input): 
-	pass
+
+	count = 0
+	
+	for i in input.upper():
+		if i == 'A' or i == 'E' or i == 'I' or i == 'O' or i == 'U':
+			count = count + 1
+
+	
+	return count
    
+print(seven("hEelLoooO"))
 
 	# <QUESTION 8>
 
@@ -228,8 +281,21 @@ def eight(input):
 	# Take a look at the documentation for Strings, List and range.
 
 def nine(inputString, char):
-	return ""
+	new = inputString.replace(" ", "")
 
+	new.split(", ")
+	print(new)
+	'''for i in new1:
+		if i == char:
+			pos = new1.index(char)
+		
+			return pos
+
+	else:
+		return -1'''
+
+
+print(nine("This is a Sentence","S"))
 
 	# <QUESTION 10>
 
